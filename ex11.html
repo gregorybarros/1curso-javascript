@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste de Nacionalidade</title>
+    <style>
+    body{
+        font:normal 20px Arial;
+        background: rgb(206, 223, 59);
+        color black;
+    }
+    </style>
+
+</head>
+<body>
+    <h1>Teste de nacionalidade</h1>
+    Digite seu Pais: <input type="text" name="txtnas" id="txtnas">
+    <input type="button" value="Verificar" onclick="check()">
+    <div id="res">
+    </div>
+    <script>
+        function check(){
+        var txtp = window.document.querySelector(`input#txtnas`)
+        var res = window.document.querySelector(`div#res`)
+        var pais = (txtp.value)
+                res.innerHTML = `<p>Seu pais e ${pais}.</p>`
+               if (pais == `brasil`) {
+                    res.innerHTML += `<p>Voce e brasileiro.</p>` 
+         }
+         else {
+             res.innerHTML += `<p> Voce e estrangeiro.`
+         }
+        res.innerHTML += `<p>Ate mais!.</p>`
+        } 
+    </script>
+</body>
+</html>
